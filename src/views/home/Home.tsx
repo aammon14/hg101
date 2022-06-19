@@ -1,4 +1,4 @@
-import About from './components/About';
+import { About, Testimonials } from './components';
 import { HomeContainer, Banner, Title } from './style';
 
 
@@ -11,6 +11,7 @@ const Home = () => {
                 </Title>
             </Banner>
             <About />
+            <Testimonials />
         </ HomeContainer>
     );
 }

@@ -14,7 +14,7 @@ export const HomeContainer = styled.div`
 export const Banner = styled.div`
     display: flex;
     width: 100%;
-    height: 600px;
+    height: 750px;
     background: url(${world});
     background-size: 100%;
     animation: ${infiniteRotate} 60s linear infinite;
@@ -28,7 +28,7 @@ export const Title = styled.div`
 
     h1 {
         margin: 0;
-        line-height: 600px;
+        line-height: 750px;
         text-align: center;
         font-size: 75px;
         color: white;
