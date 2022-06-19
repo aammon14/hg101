@@ -1,17 +1,21 @@
-import { NavContainer, Logo, Links, Link } from './style';
+import { Link } from 'react-router-dom';
+import { NavContainer, Logo, Links, StyledLink } from './style';
 
 import logo from '../assets/hg101.jpeg';
 
 const Nav = () => {
     return (
         <NavContainer>
-            <Logo src={logo}></Logo>
+            <Logo to="/">
+                <img src={logo}></img>
+            </Logo>
+
             <Links>
-                <Link>US History</Link>
-                <Link>APUSH</Link>
-                <Link>Global</Link>
-                <Link>AP Human Geo</Link>
-                <Link>Government</Link>
+                <StyledLink to="/ushistory">US History</StyledLink>
+                <StyledLink to="/">APUSH</StyledLink>
+                <StyledLink to="/">Global</StyledLink>
+                <StyledLink to="/">AP Human Geo</StyledLink>
+                <StyledLink to="/">Government</StyledLink>
             </Links>
         </NavContainer>
     );

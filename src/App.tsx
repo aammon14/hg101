@@ -1,7 +1,7 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
-import Home from './views/Home';
 import Nav from './components/Nav';
+import { Home, UsHistory } from './views';
 
 const App = () => {
     return (
@@ -9,6 +9,7 @@ const App = () => {
             <Nav />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/ushistory" element={<UsHistory />} />
             </Routes>
         </div>
     );
