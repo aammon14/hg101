@@ -1,4 +1,5 @@
 import About from './About';
 import Testimonials from './Testimonials';
+import Subjects from './Subjects';
 
-export { About, Testimonials };
+export { About, Testimonials, Subjects };
