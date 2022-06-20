@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Nav from './components/Nav';
+import { Nav, Footer } from './components';
 import { Home, UsHistory } from './views';
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/ushistory" element={<UsHistory />} />
             </Routes>
+            <Footer />
         </div>
     );
 }

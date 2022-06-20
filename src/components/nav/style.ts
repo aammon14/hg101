@@ -11,6 +11,7 @@ export const NavContainer = styled.div`
     background-color: white;
     position: sticky;
     top: 0;
+    z-index: 5;
 `;
 
 export const Logo = styled(Link)`
@@ -22,8 +23,8 @@ export const Logo = styled(Link)`
         box-shadow: 1px 1px 5px black;
 
         :hover {
-            height: 75px;
-            transition: 0.2s all ease;
+            transform: scale(1.1);
+            transition: 0.3s all ease;
         }
     }
 `;
@@ -41,7 +42,6 @@ export const StyledLink = styled(Link)`
 
     :hover {
         color: #61e7ff;
-        /* text-shadow: 1px 1px 1px black; */
         border-bottom: 3px solid #61e7ff;
     }
 `;
