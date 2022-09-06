@@ -1,4 +1,6 @@
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom'
+
 import corkboard from '../../../assets/corkboard.jpg';
 
 export type Props = {
@@ -219,13 +221,13 @@ export const SubjectPicker = styled.div`
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: masonry;
-        border: 10px solid darkblue;
+        border: 10px solid lightgrey;
         background-image: url(${corkboard});
         background-size: cover;
     }
 `;
 
-export const SubjectCard = styled.div`
+export const SubjectCard = styled(Link)`
     place-self: center;
     margin: 25px;
     background-color: white;
@@ -236,6 +238,8 @@ export const SubjectCard = styled.div`
     text-align: center;
     font-family: 'Caveat Brush';
     font-size: 24px;
+    text-decoration: none;
+    color: darkblue;
     transform: rotate(18deg);
     transform-origin: 5px 5px;
     box-shadow: 2px 2px 2px black;
@@ -248,12 +252,13 @@ export const SubjectCard = styled.div`
         top: 5px;
         left: 5px;
         background-color: red;
+        box-shadow: 1px 1px 2px black;
         z-index: 10;
     }
 
     :hover {
         z-index: 5;
-        transition: 500ms;
+        transition: 300ms;
         transform: rotate(0deg);transform-origin: top left;
         cursor: pointer;
     }

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStore } from '@fortawesome/free-solid-svg-icons';
 
-import logo from '../../assets/hg101.jpeg';
+import logo from '../../assets/hg101.png';
 import { NavContainer, Logo, Links, StyledLink, StyledIcon } from './style';
 
 const Nav = () => {

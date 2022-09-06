@@ -1,7 +1,7 @@
-import regents from '../../../assets/regents.jpeg';
-import docs from '../../../assets/docsondocs.jpeg';
-import ush from '../../../assets/us_hist.jpeg';
-import env from '../../../assets/env_disasters.jpeg';
+import regents from '../../../assets/regents.png';
+import docs from '../../../assets/docsondocs.png';
+import ush from '../../../assets/us_hist.png';
+import env from '../../../assets/env_disasters.png';
 import { SubjectsContainer, PreviewPics, SubjectPicker, SubjectCard } from './style';
 
 
@@ -22,11 +22,11 @@ const Subjects: React.FC = () => {
             <SubjectPicker>
                 <div className="download-title">Download free Social Studies lesson plans for the following subjects:</div>
                 <div className="subject-list">
-                    <SubjectCard><div></div>US History</SubjectCard>
-                    <SubjectCard><div></div>AP US History</SubjectCard>
-                    <SubjectCard><div></div>Global History</SubjectCard>
-                    <SubjectCard><div></div>AP Human Geography</SubjectCard>
-                    <SubjectCard><div></div>NYS Regents</SubjectCard>
+                    <SubjectCard to="ushistory"><div></div>US History</SubjectCard>
+                    <SubjectCard to="/"><div></div>AP US History</SubjectCard>
+                    <SubjectCard to="/"><div></div>Global History</SubjectCard>
+                    <SubjectCard to="/"><div></div>AP Human Geography</SubjectCard>
+                    <SubjectCard to="/"><div></div>NYS Regents</SubjectCard>
                 </div>
             </SubjectPicker>
         </SubjectsContainer>
