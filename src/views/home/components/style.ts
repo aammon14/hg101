@@ -1,7 +1,9 @@
 import styled, { keyframes } from 'styled-components';
+import corkboard from '../../../assets/corkboard.jpg';
 
 export type Props = {
-    active: boolean;
+    active?: boolean;
+    z?: number;
 }
 
 const pulse = keyframes`
@@ -32,9 +34,6 @@ export const WhiteBoard = styled.div<Props>`
     border: 10px solid lightgrey;
     background: rgb(255,255,255);
     background: linear-gradient(173deg, rgba(255,255,255,1) 0%, rgba(235,235,234,0.9192051820728291) 80%, rgba(255,255,255,1) 100%);
-    /* border: 10px solid #BA8C63;
-    background: rgb(39,144,35);
-    background: linear-gradient(173deg, rgba(39,144,35,1) 0%, rgba(31,130,32,1) 30%, rgba(37,101,17,1) 80%); */
     color: white;
     width: 65%;
     font-size: 20px;
@@ -128,5 +127,134 @@ export const TestimonialCard = styled.div`
     :hover {
         transform: perspective(100px) translateZ(5px); 
         box-shadow: 8px 8px 16px black;   
+    }
+`;
+
+export const SubjectsContainer = styled.div`
+    background-color: #61e7ff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+
+    .lesson-plans-title {
+        font-family: 'Kalam';
+        font-size: 28px;
+        color: darkblue;
+        text-align: center;
+    }
+`;
+
+export const PreviewPics = styled.div<Props>`
+    position: relative;
+    max-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    img {
+        max-height: 250px;
+    }
+
+    img:first-child {
+        justify-self: end;
+        align-self: end;
+      
+        :hover {
+            z-index: 5;
+            transition: 500ms;
+            transform: rotate(-6deg) translateX(25px) translateY(18px) scale(1.2);
+            box-shadow: 2px 2px 2px black;
+        }
+    }
+    img:nth-child(2) {
+        justify-self: start;
+        align-self: end;
+        z-index: 1;
+
+        :hover {
+            z-index: 5;
+            transition: 500ms;
+            transform: translateX(-15px) translateY(20px) rotate(-8deg) scale(1.2);
+            box-shadow: 2px 2px 2px black;
+        }
+    }
+    img:nth-child(3) {
+        justify-self: end;
+        align-self: end;
+        z-index: 1;
+
+        :hover {
+            z-index: 5;
+            transition: 500ms;
+            transform: translateX(30px) translateY(-30px) rotate(8deg) scale(1.15);
+            box-shadow: 2px 2px 2px black;
+        }
+    }
+    img:nth-child(4) {
+        justify-self: start;
+        align-self: start;
+        z-index: 1;
+
+        :hover {
+            z-index: 5;
+            transition: 500ms;
+            transform: translateX(-25px) translateY(-25px) rotate(18deg) scale(1.15);
+            box-shadow: 2px 2px 2px black;
+        }
+    }
+`;
+
+export const SubjectPicker = styled.div`
+    margin: 0 20px;
+    padding: 0 20px;
+    text-align: center;
+
+    .download-title {
+        font-family: 'Kalam';
+        font-size: 28px;
+        color: darkblue;
+    }
+
+    .subject-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: masonry;
+        border: 10px solid darkblue;
+        background-image: url(${corkboard});
+        background-size: cover;
+    }
+`;
+
+export const SubjectCard = styled.div`
+    place-self: center;
+    margin: 25px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+    font-family: 'Caveat Brush';
+    font-size: 24px;
+    transform: rotate(18deg);
+    transform-origin: 5px 5px;
+    box-shadow: 2px 2px 2px black;
+
+    >div {
+        position: absolute;
+        height: 5px;
+        width: 5px;
+        border-radius: 5px;
+        top: 5px;
+        left: 5px;
+        background-color: red;
+        z-index: 10;
+    }
+
+    :hover {
+        z-index: 5;
+        transition: 500ms;
+        transform: rotate(0deg);transform-origin: top left;
+        cursor: pointer;
     }
 `;
