@@ -11,7 +11,7 @@ export const NavContainer = styled.div`
     background-color: white;
     position: sticky;
     top: 0;
-    z-index: 5;
+    z-index: 1000;
 `;
 
 export const Logo = styled(Link)`
