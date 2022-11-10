@@ -240,6 +240,7 @@ export const SubjectCard = styled(Link)`
     font-size: 24px;
     text-decoration: none;
     color: darkblue;
+    transition: 300ms;
     transform: rotate(18deg);
     transform-origin: 5px 5px;
     box-shadow: 2px 2px 2px black;
@@ -259,7 +260,7 @@ export const SubjectCard = styled(Link)`
     :hover {
         z-index: 5;
         transition: 300ms;
-        transform: rotate(0deg);transform-origin: top left;
+        transform: rotate(0deg);
         cursor: pointer;
     }
 `;

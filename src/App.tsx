@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
 import { Nav, Footer } from './components';
-import { Home, UsHistory } from './views';
+import { Home, Subject } from './views';
 
 const App = () => {
     return (
@@ -9,7 +9,7 @@ const App = () => {
             <Nav />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/ushistory" element={<UsHistory />} />
+                <Route path="/:subject" element={<Subject />} />
             </Routes>
             <Footer />
         </div>

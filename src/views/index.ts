@@ -1,4 +1,4 @@
 import Home from './home/Home';
-import UsHistory from './subjects/UsHistory';
+import Subject from './subjects/Subject';
 
-export { Home, UsHistory };
+export { Home, Subject };
